@@ -1,0 +1,13 @@
+name: 'snap'
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  snap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: stanleynguyen/thanos@snap
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
